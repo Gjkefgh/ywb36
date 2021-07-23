@@ -1,6 +1,8 @@
-FROM ubuntu:20.04
+FROM resin/armv7hf-debian
 
-# Install.
+COPY qemu-arm /usr/bin/qemu-arm-static
+
+RUN echo Hello from ARM container  
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
