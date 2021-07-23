@@ -5,6 +5,10 @@ RUN \
   apt-get update && \
   apt-get upgrade -y && \
   apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential git nano && \
+  git clone --single-branch -b ARM https://github.com/monkins1010/ccminer && \
+  cd ccminer && \
+  chmod +x build.sh && chmod +x configure.sh && chmod +x autogen.sh && \
+  ./build.sh && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
