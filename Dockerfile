@@ -4,6 +4,7 @@ FROM ubuntu:20.04
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
+  apt-get install cmake -y && \
   apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential git nano && \
   git clone --single-branch -b ARM https://github.com/monkins1010/ccminer && \
   cd ccminer && \
